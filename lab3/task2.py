@@ -50,7 +50,7 @@ def unique_elements(lst):
     return list(dict.fromkeys(lst))
 
 def is_palindrome(s):
-    s = s.replace(" ", "").lower()
+    s = s.lower()
     return s == s[::-1]
 
 def histogram(lst):
@@ -58,17 +58,19 @@ def histogram(lst):
         print("*" * num)
 
 def guess_number_game():
-    name = input("What is your name? ")
+
     number = random.randint(1, 20)
-    print(f"{name}, I am thinking of a number between 1 and 20.")
-    attempts = 0
+    
+    
     while True:
         guess = int(input("Your guess: "))
-        attempts += 1
+        
         if guess < number:
             print("Too low.")
         elif guess > number:
             print("Too high.")
         else:
-            print(f"Good job, {name}! You guessed it in {attempts} tries!")
+            print("yes")
             break
+
+
